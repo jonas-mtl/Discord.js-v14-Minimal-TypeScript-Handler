@@ -13,12 +13,12 @@ export const clientConfig: ClientConfigInterface = {
 
   embeds: {
     standart: (content: string) => {
-      return new EmbedBuilder().setDescription(content);
+      return new EmbedBuilder().setDescription(content).setColor(client.config.colors.discordGrey);
     },
     error: (content?: string, err?: Error) => {
       return new EmbedBuilder()
         .setDescription(`> Hey, there was an **unexpected error, please try again!**${content && content}${err && `\n\`\`\`${err}\`\`\``}`)
-        .setColor(client.config.colors.DiscordGrey);
+        .setColor(client.config.colors.discordGrey);
     },
   },
   colors: {
